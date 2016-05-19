@@ -1,0 +1,7 @@
+.cache
+.tox
+stringtopy.egg-info
+_build
+.coverage
+dist
+build
