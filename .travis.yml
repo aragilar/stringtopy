@@ -1,11 +1,5 @@
 language: python
 
-addons:
-  apt:
-    packages:
-      - libhdf5-serial-dev # for h5py
-      - pandoc # for prerelease
-
 sudo: false
 
 cache:
@@ -21,7 +15,7 @@ env:
   - TOXENV=pylint
   - TOXENV=docs
   - TOXENV=check-manifest
-  #- TOXENV=checkreadme
+  #- TOXENV=check-readme
 matrix:
   include:
     - python: 3.5
@@ -30,8 +24,6 @@ matrix:
 
 before_install:
   - pip install codecov # for coverage
-  - pip install invoke gitchangelog # for prerelease
-  - invoke prerelease
 
 install:
   - pip install tox
