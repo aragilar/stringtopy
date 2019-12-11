@@ -30,9 +30,6 @@ matrix:
       - TOXENV=docs
     - python: 3.7
       env:
-      - TOXENV=doctest
-    - python: 3.7
-      env:
       - TOXENV=check-manifest
     - python: 3.7
       env:
