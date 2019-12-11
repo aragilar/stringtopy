@@ -19,7 +19,7 @@ setuptools.setup(
     install_requires = [],
     author = "James Tocknell",
     author_email = "aragilar@gmail.com",
-    description = "",
+    description = "stringtopy is a small library to convert strings to a specified type (e.g. int, float or bool), allowing more human friendly input similar to configparser.",
     #long_description = long_description,
     license = "3-clause BSD",
     keywords = "strings",

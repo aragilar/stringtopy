@@ -1,4 +1,11 @@
+# coding: utf-8
 """
+stringtopy is a small library to convert strings to a specified type (e.g.
+int, float or bool), allowing more human friendly input similar to
+configparser.
+
+:copyright: (c) 2016 James Tocknell
+:license: 3-clause BSD
 """
 
 from fractions import Fraction
@@ -13,6 +20,9 @@ BOOLEAN_FALSE = {'0', 'no', 'false', 'off', }
 
 
 def str_to_float_converter():
+    """
+    Returns a human friendly float converter, currently takes no arguments.
+    """
     def str_to_float(s):
         """
         Convert a string to a float
@@ -22,6 +32,9 @@ def str_to_float_converter():
 
 
 def str_to_int_converter():
+    """
+    Returns a human friendly int converter, currently takes no arguments.
+    """
     def str_to_int(s):
         """
         Convert a string to a int
@@ -36,10 +49,27 @@ def str_to_int_converter():
 def str_to_bool_converter(
     boolean_true=None, boolean_false=None, additional=True
 ):
+    """
+    Returns a human friendly bool converter.
+
+    Parameters
+    ----------
+    additional : bool
+        If True, include the stringtopy defaults for True and False to the list
+        of items considered True and False.
+    boolean_true : iterable of str
+        List of str to consider as True
+    boolean_false : iterable of str
+        List of str to consider as False
+    """
     if boolean_true is None:
         boolean_true = set()
+    else:
+        boolean_true = set(boolean_true)
     if boolean_false is None:
         boolean_false = set()
+    else:
+        boolean_false = set(boolean_false)
     if additional:
         boolean_true.update(BOOLEAN_TRUE)
         boolean_false.update(BOOLEAN_FALSE)
@@ -52,7 +82,7 @@ def str_to_bool_converter(
         s = s.strip().lower()
         if s in boolean_true:
             return True
-        elif s in boolean_false:
+        if s in boolean_false:
             return False
         raise ValueError("{} is neither True nor False.".format(s))
     return str_to_bool
