@@ -10,3 +10,6 @@ recursive-include tests *.py
 include pylintrc
 include tox.ini
 include pypi-intro.rst
+include appveyor.yml
+include bors.toml
+include pylint-requirements.txt
