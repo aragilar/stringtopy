@@ -19,30 +19,42 @@ BOOLEAN_TRUE = {'1', 'yes', 'true', 'on', }
 BOOLEAN_FALSE = {'0', 'no', 'false', 'off', }
 
 
-def str_to_float_converter():
+def str_to_float_converter(use_none_on_fail=False):
     """
-    Returns a human friendly float converter, currently takes no arguments.
+    Returns a human friendly float converter, can use use_none_on_fail to
+    return None if value cannot be converted.
     """
     def str_to_float(s):
         """
         Convert a string to a float
         """
-        return float(Fraction(s))
+        try:
+            return float(Fraction(s))
+        except ValueError:
+            if use_none_on_fail:
+                return None
+            raise
     return str_to_float
 
 
-def str_to_int_converter():
+def str_to_int_converter(use_none_on_fail=False):
     """
-    Returns a human friendly int converter, currently takes no arguments.
+    Returns a human friendly int converter, can use use_none_on_fail to return
+    None if value cannot be converted.
     """
     def str_to_int(s):
         """
         Convert a string to a int
         """
-        frac = Fraction(s)
-        if frac.denominator == 1:
-            return int(frac)
-        raise ValueError("{} is not an integer".format(frac))
+        try:
+            frac = Fraction(s)
+            if frac.denominator == 1:
+                return int(frac)
+            raise ValueError("{} is not an integer".format(frac))
+        except ValueError:
+            if use_none_on_fail:
+                return None
+            raise
     return str_to_int
 
 
@@ -79,6 +91,9 @@ def str_to_bool_converter(
         )
 
     def str_to_bool(s):
+        """
+        Convert a string to a bool, based on settings
+        """
         s = s.strip().lower()
         if s in boolean_true:
             return True
