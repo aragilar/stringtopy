@@ -24,7 +24,7 @@ def str_to_float_converter(use_none_on_fail=False):
     Returns a human friendly float converter, can use use_none_on_fail to
     return None if value cannot be converted.
     """
-    def str_to_float(s):
+    def str_to_float_func(s):
         """
         Convert a string to a float
         """
@@ -34,7 +34,7 @@ def str_to_float_converter(use_none_on_fail=False):
             if use_none_on_fail:
                 return None
             raise
-    return str_to_float
+    return str_to_float_func
 
 
 def str_to_int_converter(use_none_on_fail=False):
@@ -42,7 +42,7 @@ def str_to_int_converter(use_none_on_fail=False):
     Returns a human friendly int converter, can use use_none_on_fail to return
     None if value cannot be converted.
     """
-    def str_to_int(s):
+    def str_to_int_func(s):
         """
         Convert a string to a int
         """
@@ -55,7 +55,7 @@ def str_to_int_converter(use_none_on_fail=False):
             if use_none_on_fail:
                 return None
             raise
-    return str_to_int
+    return str_to_int_func
 
 
 def str_to_bool_converter(
@@ -90,7 +90,7 @@ def str_to_bool_converter(
             "{} are both True and False".format(boolean_true & boolean_false)
         )
 
-    def str_to_bool(s):
+    def str_to_bool_func(s):
         """
         Convert a string to a bool, based on settings
         """
@@ -100,4 +100,11 @@ def str_to_bool_converter(
         if s in boolean_false:
             return False
         raise ValueError("{} is neither True nor False.".format(s))
-    return str_to_bool
+    return str_to_bool_func
+
+
+# versions using defaults so that users can import the actual functions, rather
+# than creating their own
+str_to_float = str_to_float_converter()
+str_to_int = str_to_int_converter()
+str_to_bool = str_to_bool_converter()
