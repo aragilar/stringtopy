@@ -10,35 +10,19 @@ branches:
 environment:
   matrix:
 
-    - PYTHON: "C:\\Python35"
-      TOXENV: "py35"
-      TOXPYTHON: "%PYTHON%\\python.exe"
-
-    - PYTHON: "C:\\Python36"
-      TOXENV: "py36"
-      TOXPYTHON: "%PYTHON%\\python.exe"
-
     - PYTHON: "C:\\Python37"
       TOXENV: "py37"
       TOXPYTHON: "%PYTHON%\\python.exe"
 
-    - PYTHON: "C:\\Python37"
+    - PYTHON: "C:\\Python38"
       TOXENV: "py38"
       TOXPYTHON: "%PYTHON%\\python.exe"
 
-    - PYTHON: "C:\\Python35-x64"
-      TOXENV: "py35"
-      TOXPYTHON: "%PYTHON%\\python.exe"
-
-    - PYTHON: "C:\\Python36-x64"
-      TOXENV: "py36"
-      TOXPYTHON: "%PYTHON%\\python.exe"
-
     - PYTHON: "C:\\Python37-x64"
       TOXENV: "py37"
       TOXPYTHON: "%PYTHON%\\python.exe"
 
-    - PYTHON: "C:\\Python37-x64"
+    - PYTHON: "C:\\Python38-x64"
       TOXENV: "py38"
       TOXPYTHON: "%PYTHON%\\python.exe"
 
