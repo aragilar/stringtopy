@@ -61,7 +61,6 @@ project = u"stringtopy"
 copyright = u"2016, James Tocknell"
 author = u"James Tocknell"
 
-
 version = ".".join(stringtopy.__version__.split(".")[0:2])
 # The full version, including alpha/beta/rc tags.
 release = stringtopy.__version__
@@ -109,7 +108,6 @@ pygments_style = "sphinx"
 
 # If true, `todo` and `todoList` produce output, else they produce nothing.
 todo_include_todos = False
-
 
 # -- Options for HTML output ----------------------------------------------
 
@@ -255,16 +253,15 @@ latex_documents = [
 # If false, no module index is generated.
 # latex_domain_indices = True
 
-
 # -- Options for manual page output ---------------------------------------
 
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
-man_pages = [(master_doc, "stringtopy", u"stringtopy Documentation", [author], 1)]
+man_pages = [(master_doc, "stringtopy", u"stringtopy Documentation", [author],
+              1)]
 
 # If true, show URL addresses after external links.
 # man_show_urls = False
-
 
 # -- Options for Texinfo output -------------------------------------------
 
