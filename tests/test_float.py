@@ -1,6 +1,6 @@
 from __future__ import division
-import pytest
 
+import pytest
 from stringtopy import str_to_float_converter
 
 
