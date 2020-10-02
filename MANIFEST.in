@@ -13,3 +13,4 @@ include pypi-intro.rst
 include appveyor.yml
 include bors.toml
 include pylint-requirements.txt
+exclude .deepsource.toml
