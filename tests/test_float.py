@@ -13,10 +13,10 @@ def test_not_float_with_none():
     assert str_to_float("this is not a float") is None
 
 def test_decimal(default_str_to_float):
-    assert 1.234 == default_str_to_float("1.234")
+    assert default_str_to_float("1.234") == 1.234
 
 def test_exp_notation(default_str_to_float):
-    assert 5.76e7 == default_str_to_float("5.76e7")
+    assert default_str_to_float("5.76e7") == 5.76e7
 
 def test_fraction(default_str_to_float):
     assert 3 / 2 == default_str_to_float("3/2")
