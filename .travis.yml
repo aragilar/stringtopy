@@ -46,3 +46,11 @@ script:
 
 after_success:
   - codecov
+
+deploy:
+  provider: pypi
+  username: "__token__"
+  password:
+    secure: dK48C2Qk+2dRQE+OJVhGocRJH6PrFP2owW9VNJJVpZVCHU5dahoPGKDRh0TRy8pTBu7kyqjCKk6DJUMN5Tsaj5xY6V/fiDNNO3U5DDo2UfLk9V5H0ApYygf/ThL18CaQ5IejrMlJtB6xfNqfD1NO7kVQXAdpWS/g3BuzDI/lqpgn+bSGaHOXTpNVbl8fErH8m96QRZT6O0X9hIMWC9Z4TFv7vezJ1Yeuv+F4kQVdUUS7EoftGL44/teheSl1RU/vS22tOXB+VeR4lKJHWb9Lwn+BYouSnW/3YzHSSg9E2RIk4n2UpYnjfTO3jzbDTtVGOWSP0cW8O7dnX/KPPSaPvbemz9VtFu1YeL88BPOWI1WgbvEYjflrllWkOGbaYHRywyqTEBKebEAgI1yXg/HPeEV6ygNqHmlQRIdVkxoCdTHgyDUfTY+AXH2j0oEey4G4euGmds5OEUdwILiv2fioaq4bgGWUeM1ejXx1jYBPFY99uo/X+m375KHB1cal2vhSJZbkHiy+aP/soRxHdTZZwWhXVea0e1mzjddtT/SRVVBag/r0q+UsHXuLGXPXtwZi2Xk7rSBH3PT88E36ajbpYj8olyzZeqsj8WlAs7IkhXTrhO8MvQrZ4Fv+2j1FzzABtMeHRAKJgCm0sKYd/mUFiFy2q/T7FWG/sHIJU86L1EU=
+  on:
+    tags: true
