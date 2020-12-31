@@ -1,5 +1,5 @@
 [![Documentation Status](https://readthedocs.org/projects/stringtopy/badge/?version=latest)](http://stringtopy.readthedocs.org/en/latest/?badge=latest)
-[![Build Status](https://travis-ci.org/aragilar/stringtopy.svg?branch=master)](https://travis-ci.org/aragilar/stringtopy)
+[![Build Status](https://dev.azure.com/jamestocknell/stringtopy/_apis/build/status/aragilar.stringtopy?branchName=master)](https://dev.azure.com/jamestocknell/stringtopy/_build/latest?definitionId=5&branchName=master)
 [![Coverage Status](https://codecov.io/github/aragilar/stringtopy/coverage.svg?branch=master)](https://codecov.io/github/aragilar/stringtopy?branch=master)
 [![Version](https://img.shields.io/pypi/v/stringtopy.svg)](https://pypi.python.org/pypi/stringtopy/)
 [![License](https://img.shields.io/pypi/l/stringtopy.svg)](https://pypi.python.org/pypi/stringtopy/)
