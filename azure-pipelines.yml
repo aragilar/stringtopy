@@ -22,7 +22,7 @@ variables:
 jobs:
   - job: "static_checks"
     pool:
-      vmImage: ubuntu-16.04
+      vmImage: ubuntu-20.04
     variables:
       TOXENV: flake8,pylint,docs,check-manifest,checkreadme
     steps:
@@ -37,9 +37,9 @@ jobs:
           tox
         displayName: tox
 
-  - job: "ubuntu1604"
+  - job: "ubuntu"
     pool:
-      vmImage: ubuntu-16.04
+      vmImage: ubuntu-20.04
     strategy:
       matrix:
         py37:
@@ -58,7 +58,7 @@ jobs:
         parameters:
           platform: linux
 
-  - job: "macOS1015"
+  - job: "macOS"
     pool:
       vmImage: macOS-10.15
     strategy:
